@@ -1,10 +1,12 @@
 plugins {
     alias(libs.plugins.android.library)
+    alias(libs.plugins.hilt.android)
+    alias(libs.plugins.ksp.android)
 
 }
 
 android {
-    namespace = "com.example.mylibrary"
+    namespace = "com.example.core.network"
     compileSdk {
         version = release(37)
     }
@@ -34,4 +36,7 @@ dependencies {
     implementation(libs.retrofit.gson)
     implementation(libs.okhttp)
     implementation(libs.okhttp.logging)
+
+    implementation (libs.android.hilt)
+    ksp (libs.android.hilt.compiler)
 }

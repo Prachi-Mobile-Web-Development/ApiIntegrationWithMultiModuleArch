@@ -8,7 +8,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.mylibrary"
+    namespace = "com.example.feature.post"
     compileSdk {
         version = release(37)
     }
@@ -27,8 +27,7 @@ android {
 
 dependencies {
     implementation(project(":domain"))
-    implementation(project(":data"))
-
+    api(project(":data"))
     implementation(libs.androidx.appcompat)
     implementation(libs.androidx.compose.runtime)
     implementation(libs.androidx.core.ktx)
