@@ -1,5 +1,6 @@
 package com.example.mylibrary
 
+import com.example.core.network.BuildConfig
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -13,11 +14,9 @@ import javax.inject.Singleton
 @InstallIn(SingletonComponent::class)
 object NetworkModule {
 
-    private const val BASE_URL="https://jsonplaceholder.typicode.com/"
-
     @Provides
     @Singleton
-    fun provideRetrofit()= Retrofit.Builder().baseUrl(BASE_URL).addConverterFactory(
+    fun provideRetrofit(): Retrofit = Retrofit.Builder().baseUrl(BuildConfig.BASE_URL).addConverterFactory(
         GsonConverterFactory.create()).client(OkHttpClient()).build()
 
 }
