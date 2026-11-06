@@ -24,7 +24,6 @@ dependencyResolutionManagement {
 
 rootProject.name = "ApiIntegrationWithMultiModuleArch"
 include(":app")
-include(":core")
 include(":core:network")
 include(":feature:post")
 include(":domain")

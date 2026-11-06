@@ -40,6 +40,8 @@ android {
 
 dependencies {
     implementation(project(":feature:post"))
+    implementation(project(":data"))
+
 
     implementation(platform(libs.androidx.compose.bom))
     implementation(libs.androidx.activity.compose)

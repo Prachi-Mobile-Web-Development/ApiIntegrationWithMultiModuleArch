@@ -27,7 +27,6 @@ android {
 
 dependencies {
     implementation(project(":domain"))
-    api(project(":data"))
     implementation(libs.androidx.appcompat)
     implementation(libs.androidx.compose.runtime)
     implementation(libs.androidx.core.ktx)
